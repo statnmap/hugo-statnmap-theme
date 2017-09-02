@@ -1,0 +1,47 @@
+<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="{{ .Site.BaseURL | relLangURL }}" id="logo">
+          {{ if .Site.Params.logo }}
+          <i class="logo" style="background-image: url('{{ .Site.Params.logo | absURL }}')"></i>
+          {{end}}
+          <span class="site-title">{{ .Site.Title }}</span>
+      </a>
+      <nav id="main-nav">
+          {{ range .Site.Menus.main }}
+          <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ end }}
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.Params.avatar | absURL }}"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="{{ i18n "search-placeholder"}}">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          {{ range .Site.Menus.main }}
+          <td><a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></td>
+           {{ end }}
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>

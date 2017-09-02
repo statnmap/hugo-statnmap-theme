@@ -1,0 +1,9 @@
+<div class="article-gallery">
+    <div class="article-gallery-photos">
+        {{ range .Params }}
+        <a class="article-gallery-img fancybox" href="{{ $.Site.LanguagePrefix }}/{{ . }}" rel="group1">
+            <img src="{{ . | absLangURL }}" itemprop="image">
+        </a>
+        {{ end }}
+    </div>
+</div>

@@ -1,0 +1,18 @@
+name = "Icarus"
+license = "MIT"
+licenselink = "//github.com/digitalcraftsman/hugo-icarus-theme/blob/master/LICENSE.md"
+description = "The blog theme you may fall in love with, coming to Hugo. "
+homepage = "//github.com/digitalcraftsman/hugo-icarus-theme"
+tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics"]
+features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics"]
+min_version = 0.20
+
+[author]
+  name = "Digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman"
+
+# If porting an existing theme
+[original]
+  name = "Ruipeng Zhang"
+  homepage = "http://blog.zhangruipeng.me"
+  repo = "//github.com/ppoffice/hexo-theme-icarus"
