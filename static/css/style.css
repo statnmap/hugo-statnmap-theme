@@ -814,12 +814,17 @@ code {
   z-index: 2;
 }
 #profile.card {
-  top: 50px;
-  right: 20px;
+  top: 40px;
+  right: 0px;
   z-index: 999;
   display: block;
   min-width: 280px;
-  position: absolute;
+  position: fixed;
+  background: #1e73be;
+  border: 1px solid #f1f1f1;
+}
+#profile.card .inner {
+  margin-top: 10px;
 }
 #profile.card .profile-inner {
   position: relative;
@@ -831,7 +836,7 @@ code {
   z-index: 1;
   content: '';
   top: -20px;
-  right: 10px;
+  right: 28px;
   position: absolute;
   border-width: 10px;
   border-style: solid;
@@ -1484,6 +1489,7 @@ ol.toc {
   height: 100%;
   display: block;
 }
+
 .archive-article .archive-article-thumbnail .thumbnail .thumbnail-image {
   position: absolute;
   -webkit-background-size: cover;
@@ -1512,9 +1518,22 @@ ol.toc {
 }
 
 .archives .thumbnail span {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+.archives .article-header, .archives .article-entry {
+    padding: 0px 10px 10px 220px;
+}
+@media screen and (max-width: 980px) {
+  .archives .thumbnail span {
+    width: 100px;
+    height: 100px;
     display: block;
+  }
+  .archives .article-header, .archives .article-entry {
+      padding: 0px 10px 10px 110px;
+  }
 }
 .archives .thumbnail-image {
     background-size: cover;
@@ -1526,12 +1545,13 @@ ol.toc {
     padding: 10px;
     background: white;
 }
+.archives .article-inner {
+    box-shadow: unset;
+}
 .archives .thumbnail-image.thumbnail-none {
     background-image: url("images/thumb-default-small.png");
 }
-.archives .article-header, .archives .article-entry {
-    padding: 0px 10px 10px 220px;
-}
+
 .archives .article-header h1 {
     color: #333;
 }
