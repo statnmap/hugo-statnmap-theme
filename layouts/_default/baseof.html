@@ -3,16 +3,16 @@
 <div id="container">
 	{{ partialCached "header" . }}
    	
-   	<div class="outer">
-      <div id="sideleft">
-     	{{ if not .Params.disable_profile }}
-      	{{ partialCached "profile" . }}
-      {{ end }}
+ 	<div class="outer">
+    <div id="sideleft">
+   	{{ if not .Params.disable_profile }}
+    	{{ partialCached "profile" . }}
+    {{ end }}
 
-     	{{ if not .Params.disable_widgets }}
-      	{{ partial "sidebar" . }}
-      {{ end }}
-      </div>
+   	{{ if not .Params.disable_widgets }}
+    	{{ partial "sidebar" . }}
+    {{ end }}
+    </div>
 
     <section id="main">
     {{ block "main" . }}{{ end }}
