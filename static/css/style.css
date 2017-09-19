@@ -117,7 +117,7 @@ body,
 }
 body {
   color: #565a5f;
-  background: #f5f8f9;
+  background: #f1f1f1;
   font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -182,20 +182,34 @@ code {
 #container > .outer {
   margin-bottom: 30px;
 }
+#sideleft {
+  float: left;
+  background-color: #1e73be;
+  color: white;
+  padding: 0 0.5%;
+}
 @media screen and (min-width: 1200px) {
   #main {
     display: inline;
     float: left;
-    width: 52.307692307692314%;
+    /* width: 52.307692307692314%; */
+    width: 72%;
     margin: 0 0.769230769230769%;
+  }
+  #sideleft {
+    width: 25%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #main {
     display: inline;
     float: left;
-    width: 67.6923076923077%;
+    /* width: 67.6923076923077%; */
+    width: 72%;
     margin: 0 0.769230769230769%;
+  }
+  #sideleft {
+    width: 25%;
   }
 }
 .archive-article-header a,
@@ -225,8 +239,8 @@ code {
   text-decoration: none;
   text-transform: uppercase;
 }
+/* #profile .inner, */
 #header,
-#profile .inner,
 .article-inner,
 #comments,
 .archive-article,
@@ -629,14 +643,17 @@ code {
   padding: 15px 20px;
   border-bottom: 1px solid #eceff2;
 }
+/*
 .profile-block:last-child {
   border-bottom: none;
 }
+*/
 #profile {
   display: inline;
   float: left;
-  width: 21.53846153846154%;
-  margin: 0 0.769230769230769%;
+  /* width: 21.53846153846154%; */
+  width: 100%;
+  /* margin: 0 0.769230769230769%; */
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -646,7 +663,7 @@ code {
 }
 #profile .inner {
   margin-top: 40px;
-  background: #fff;
+  /* background: #fff; */
 }
 #profile .inner .base-info #avatar {
   display: block;
@@ -667,7 +684,7 @@ code {
 #profile .inner .base-info #location {
   font-size: 12px;
   margin-top: 5px;
-  color: #9a9ea3;
+  color: #f1f1f1;
 }
 #profile .inner .base-info #location .fa {
   margin-right: 5px;
@@ -734,10 +751,10 @@ code {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #898d92;
+  color: #f1f1f1;
 }
 #profile .inner .social-links > table td a:hover {
-  color: #565a5f;
+  color: #38b7ea;
 }
 #profile .inner .social-links > table td a.tooltip:hover:after {
   right: -50%;
@@ -1669,7 +1686,8 @@ ol.toc {
   #sidebar {
     display: inline;
     float: left;
-    width: 21.53846153846154%;
+    /* width: 21.53846153846154%; */
+    width: 100%;
     margin: 0 0.769230769230769%;
   }
 }
@@ -1677,7 +1695,8 @@ ol.toc {
   #sidebar {
     display: inline;
     float: left;
-    width: 29.230769230769234%;
+    /* width: 29.230769230769234%; */
+    width: 100%;
     margin: 0 0.769230769230769%;
   }
 }
@@ -1740,7 +1759,7 @@ ol.toc {
   padding: 15px 5px;
 }
 .widget a {
-  color: #777;
+  color: #f1f1f1;
   text-decoration: none;
 }
 .widget a:hover {
@@ -1774,7 +1793,7 @@ ol.toc {
 .widget ol li a,
 .widget ul .category-list-child a,
 .widget ol .category-list-child a {
-  color: #777;
+  color: #f1f1f1;
 }
 .widget ul ul,
 .widget ol ul,
@@ -1796,7 +1815,7 @@ ol.toc {
 }
 .widget ul:not(#recent-post) li a:before,
 .widget ol:not(#recent-post) li a:before {
-  color: #ccc;
+  color: #f1f1f1;
   content: "\f0da";
   font-size: 12px;
   margin-right: 6px;
@@ -1808,7 +1827,7 @@ ol.toc {
 }
 .widget ul:not(#recent-post) li a:hover:before,
 .widget ol:not(#recent-post) li a:hover:before {
-  color: #333;
+  color: #38b7ea;
 }
 #toTop {
   display: none;
@@ -1844,6 +1863,9 @@ ol.toc {
 }
 #recent-post li {
   padding: 10px 0 10px 94px;
+  /* padding: 10px 2px 10px 96px;
+  border: 1px solid #f1f1f1; */
+  vertical-align: top;
 }
 #recent-post li:before,
 #recent-post li:after {
@@ -1890,6 +1912,10 @@ ol.toc {
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
 }
+#recent-post li .item-inner .item-category a {
+  vertical-align: top;
+  line-height: 1em;
+}
 #recent-post li .item-inner a,
 #recent-post li .item-inner .item-category {
   font-size: 13px;
@@ -1910,10 +1936,13 @@ ol.toc {
   margin-right: 5px;
 }
 #recent-post li .item-inner .item-title {
-  font-size: 15px;
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  vertical-align: top;
 }
 #recent-post li .item-inner .item-title a {
-  color: #333;
+  color: #f1f1f1;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -1922,7 +1951,7 @@ ol.toc {
 #recent-post li .item-inner .item-date {
   color: #aaa;
   font-size: 13px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #recent-post li:hover .item-thumbnail {
   opacity: 0.8;

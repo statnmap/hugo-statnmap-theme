@@ -17,6 +17,7 @@
                     </a>
                 </div>
                 <div class="item-inner">
+                    <p class="item-title"><a href="{{ .Permalink }}" lang="{{ .Lang }}" class="title">{{ .Title }}</a></p>
                     {{ if isset .Params "categories" }}
                     {{ if gt (len .Params.categories) 0 }}
                     <p class="item-category">
@@ -27,7 +28,6 @@
                     </p>
                     {{ end }}
                     {{ end }}
-                    <p class="item-title"><a href="{{ .Permalink }}" lang="{{ .Lang }}" class="title">{{ .Title }}</a></p>
                     <p class="item-date">
                         <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
                     </p>
