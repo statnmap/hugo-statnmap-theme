@@ -5,9 +5,6 @@
         {{ partial "single.html" $context }}
     {{ else }}
 <section class="archives-wrap">
-  <div class="archive-category-wrap">
-      <span class="archive-category">{{ .Title }}</span>
-  </div>
   <div class="archives">
     {{ range .Data.Pages }}
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
