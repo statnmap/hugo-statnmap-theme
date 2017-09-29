@@ -204,7 +204,7 @@ code {
 }
 
 @media screen and (max-width: 639px) {
-  #sideleft {
+  #sidebar {
     display: none;
   }
   #main {
@@ -213,13 +213,6 @@ code {
   }
 }
 @media screen and (min-width: 1200px) {
-  #sideleft {
-		float: left;
-		margin-right: -100%;
-		max-width: 413px;
-		position: relative;
-		width: 25%;
-	}
 	body:before {
 		background-color: #1e73be;
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
@@ -698,6 +691,13 @@ code {
   margin: 10px auto 20px;
   width: 128px;
   height: 128px;
+}
+@media screen and (max-height: 480px) {
+  #profile .inner .base-info #avatar {
+    margin: 10px auto 10px;
+    width: 54px;
+    height: 54px;
+  }
 }
 #profile .inner .base-info #name,
 #profile .inner .base-info #title,
@@ -1819,7 +1819,7 @@ ol.toc {
   margin-right: 5px;
 }
 .widget-wrap {
-  margin: 40px 10px;
+  margin: 0 10px 40px;
 }
 @media screen and (max-width: 559px) {
   .widget-wrap {
@@ -1903,6 +1903,28 @@ ol.toc {
 .widget ol:not(#recent-post) li a:hover:before {
   color: #38b7ea;
 }
+.widget ul.language li a:before,
+.widget ol.language li a:before {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+/* Multi-language */
+.lang-translation .active img, .language .active img {
+  opacity: 0.5;
+}
+.lang-translation a, .language a {
+  border: none;
+}
+ul.language {
+  display: flex;
+  padding: 0;
+}
+ul.language li {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 #toTop {
   display: none;
   cursor: pointer;
