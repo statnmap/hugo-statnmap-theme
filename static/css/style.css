@@ -182,12 +182,12 @@ code {
 }
 #container > .outer {
   margin-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 64px;
 }
 @media screen and (max-width: 800px) {
   #container > .outer {
     margin-bottom: 30px;
-    margin-top: 100px;
+    margin-top: 113px;
   }
 }
 #main {
