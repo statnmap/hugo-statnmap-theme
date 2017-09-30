@@ -106,6 +106,7 @@ theme = "hugo-icarus-theme"
     googlescholar   = ""
     orcid           = ""
     researchgate    = ""
+    email           = ""
 
     
 
