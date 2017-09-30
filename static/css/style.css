@@ -700,13 +700,24 @@ code {
   display: block;
   margin: 10px auto 20px;
   width: 128px;
-  height: 128px;
+  max-height: 128px;
 }
 @media screen and (max-height: 480px) {
   #profile .inner .base-info #avatar {
     margin: 10px auto 10px;
     width: 54px;
-    height: 54px;
+    max-height: 54px;
+  }
+}
+#profile .inner .base-info #sitelogo {
+  display: block;
+  margin: 10px auto 20px;
+  width: 80%;
+}
+@media screen and (max-height: 480px) {
+  #profile .inner .base-info #sitelogo {
+    margin: 10px auto 10px;
+    width: 50%;
   }
 }
 #profile .inner .base-info #name,
@@ -714,6 +725,9 @@ code {
 #profile .inner .base-info #location {
   display: block;
   text-align: center;
+}
+#profile .inner .base-info #title {
+  font-size: 1.3em;
 }
 #profile .inner .base-info #name {
   font-size: 20px;

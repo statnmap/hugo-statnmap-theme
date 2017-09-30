@@ -2,8 +2,8 @@
   <div id="header-main" class="header-inner">
     <div class="outer">
       <a href="{{ .Site.BaseURL | relLangURL }}" id="logo">
-          {{ if .Site.Params.logo }}
-          <i class="logo" style="background-image: url('{{ .Site.Params.logo | absURL }}')"></i>
+          {{ if .Site.Params.squarelogo }}
+          <i class="logo" style="background-image: url('{{ .Site.Params.squarelogo | absURL }}')"></i>
           {{end}}
           <span class="site-title">{{ .Site.Title }}</span>
       </a>
