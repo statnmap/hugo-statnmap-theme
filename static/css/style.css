@@ -183,6 +183,7 @@ code {
 #container > .outer {
   margin-bottom: 30px;
   margin-top: 64px;
+  display: flex;
 }
 @media screen and (max-width: 800px) {
   #container > .outer {
@@ -193,7 +194,7 @@ code {
 #main {
   display: block;
   float: left;
-  margin-left: 29%;
+  margin-left: 4.9%;
   width: 70%;
 	background: #f1f1f1;
 }
@@ -201,13 +202,13 @@ code {
 #sideleft {
   color: #fff;
   float: left;
-  margin: 0 -100%;
   max-width: 413px;
   position: relative;
   width: 25%;
   background-color: #1e73be;
   display: block;
-  padding: 0 10px 0 calc(100% + 10px);
+  padding: 0 20px 0 calc(100% + 20px);
+  margin-left: -100%;
 }
 
 @media screen and (max-width: 639px) {
