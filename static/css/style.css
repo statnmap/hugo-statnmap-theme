@@ -193,20 +193,21 @@ code {
 #main {
   display: block;
   float: left;
-  margin-left: 29.4118%;
-  width: 70.5882%;
+  margin-left: 29%;
+  width: 70%;
 	background: #f1f1f1;
 }
 
 #sideleft {
   color: #fff;
   float: left;
-  margin-right: -100%;
+  margin: 0 -100%;
   max-width: 413px;
   position: relative;
   width: 25%;
   background-color: #1e73be;
   display: block;
+  padding: 0 10px 0 calc(100% + 10px);
 }
 
 @media screen and (max-width: 639px) {
@@ -218,21 +219,7 @@ code {
     width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
-	body:before {
-		background-color: #1e73be;
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-		content: "";
-		display: block;
-		height: 100%;
-		min-height: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 32%;
-		z-index: 0; /* Fixes flashing bug with scrolling on Safari */
-	}
-}
+
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #sideleft {
     width: 25%;
@@ -1952,6 +1939,20 @@ ol.toc {
 }
 
 /* Multi-language */
+.lang-translation {
+  display: none;
+}
+@media screen and (max-width: 639px) {
+.lang-translation {
+  display: block;
+}
+}
+.lang-translation .active img, .language .active img {
+  opacity: 0.5;
+}
+.lang-translation a, .language a {
+  border: none;
+}
 .lang-translation .active img, .language .active img {
   opacity: 0.5;
 }
