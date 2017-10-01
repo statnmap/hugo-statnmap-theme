@@ -1986,6 +1986,7 @@ ul.language li {
   border-radius: 4px;
   bottom: 20px;
   position: fixed;
+  z-index: 1;
 }
 @media screen and (min-width: 560px) and (max-width: 799px) {
   #toTop {

@@ -38,7 +38,7 @@
             if ($(document).width() >= 800) {
                 if(($(this).scrollTop() > toTop) && ($(this).scrollTop() > 0)) {
                     $('#toTop').fadeIn();
-                    $('#toTop').css('left', $('#sidebar').offset().left);
+                    $('#toTop').css('right', $('#sidebar').offset().right);
                 } else {
                     $('#toTop').fadeOut();
                 }
