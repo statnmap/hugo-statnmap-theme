@@ -1947,6 +1947,9 @@ ul.language {
 ul.language li {
   display: inline-block;
   margin: 0 auto;
+  padding: 0;
+  font-size: 15px;
+  height: 21px;
 }
 
 #toTop {
