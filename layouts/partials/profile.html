@@ -2,7 +2,9 @@
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       {{ with .Site.Params.sitelogo }}
-      <img id="sitelogo" src="{{ . | absURL }}">
+      <a href="{{ $.Site.BaseURL | relLangURL }}" title="{{ $.Site.Title }}">
+        <img id="sitelogo" src="{{ . | absURL }}">
+      </a>
       {{ else }}
         {{ with .Site.Params.gravatar }}
         <img id="avatar" src="https://www.gravatar.com/avatar/{{ . | md5 }}?s=100&d=identicon"/>

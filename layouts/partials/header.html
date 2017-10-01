@@ -7,6 +7,11 @@
           {{end}}
           <span class="site-title">{{ .Site.Title }}</span>
       </a>
+      <a href="{{ .Site.BaseURL | relLangURL }}" id="logolong">
+        {{ with .Site.Params.logolong }}
+        <img class="logolong" src="{{ . | absURL }}">
+        {{end}}
+      </a>
       <nav id="main-nav">
           {{ range .Site.Menus.main }}
           <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>

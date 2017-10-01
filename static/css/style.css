@@ -396,6 +396,7 @@ code {
   color: #38b7ea;
 }
 .header-inner #logo,
+.header-inner #logolong,
 #main-nav,
 #sub-nav,
 #search-form-wrap {
@@ -404,6 +405,7 @@ code {
   padding: 12px 15px;
 }
 .header-inner #logo,
+.header-inner #logolong,
 #main-nav {
   float: left;
 }
@@ -418,6 +420,11 @@ code {
 .header-inner #logo {
   display: inline-block;
 }
+@media screen and (max-width: 1200px) {
+  .header-inner #logo {
+    display: none;
+  }
+}
 .header-inner #logo .logo {
   margin-right: 5px;
   display: inline-block;
@@ -427,6 +434,17 @@ code {
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
+}
+.header-inner #logolong {
+  display: none;
+}
+.header-inner #logolong img {
+  height: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .header-inner #logolong {
+    display: inline-block;
+  }
 }
 #header-title {
   text-align: center;
