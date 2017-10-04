@@ -659,7 +659,7 @@ code {
   -webkit-border-radius: 16px;
   border-radius: 16px;
 }
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 639px) {
   #main-nav-mobile .menu .search-form-input {
     display: block;
   }
@@ -1997,6 +1997,7 @@ ul.language li {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   bottom: 20px;
+  right: 20px;
   position: fixed;
   z-index: 1;
 }
