@@ -184,7 +184,7 @@ code {
   margin-top: 64px;
   display: flex;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   #container > .outer {
     margin-top: 113px;
   }
@@ -210,6 +210,11 @@ code {
 }
 
 @media screen and (max-width: 639px) {
+  #sideleft {
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
   #sidebar {
     display: none;
   }
@@ -384,19 +389,22 @@ code {
 .header-inner #logo,
 .header-inner #logolong,
 #main-nav,
-#sub-nav,
-#search-form-wrap {
+#sub-nav {
   height: 40px;
   line-height: 40px;
   padding: 12px 15px;
+}
+#search-form-wrap {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 0 10px;
 }
 .header-inner #logo,
 .header-inner #logolong,
 #main-nav {
   float: left;
 }
-#sub-nav,
-#search-form-wrap {
+#sub-nav {
   float: right;
 }
 .header-inner {
@@ -559,6 +567,7 @@ code {
   height: 40px !important;
   -webkit-border-radius: 21px;
   border-radius: 21px;
+  background
 }
 #search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
 #search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
@@ -605,7 +614,7 @@ code {
   height: auto !important;
   line-height: 1.6em;
   outline: none !important;
-  background: none !important;
+  background: white !important;
   font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
   border: 1px solid #eceff2 !important;
 }
@@ -677,17 +686,10 @@ code {
   padding: 15px 20px;
   border-bottom: 1px solid #eceff2;
 }
-/*
-.profile-block:last-child {
-  border-bottom: none;
-}
-*/
 #profile {
   display: inline;
   float: left;
-  /* width: 21.53846153846154%; */
   width: 100%;
-  /* margin: 0 0.769230769230769%; */
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -696,8 +698,7 @@ code {
   }
 }
 #profile .inner {
-  margin-top: 40px;
-  /* background: #fff; */
+  margin-top: 15px;
 }
 #profile .inner .base-info #avatar {
   display: block;
@@ -715,7 +716,14 @@ code {
 #profile .inner .base-info #sitelogo {
   display: block;
   margin: 10px auto 20px;
-  width: 80%;
+  width: 50%;
+  max-width: 500px;
+}
+@media screen and (max-width: 600px) {
+  #profile .inner .base-info #sitelogo {
+    margin: 10px auto 10px;
+    width: 70%;
+  }
 }
 @media screen and (max-height: 480px) {
   #profile .inner .base-info #sitelogo {
@@ -1847,7 +1855,7 @@ ol.toc {
   margin-right: 5px;
 }
 .widget-wrap {
-  margin: 0 10px 40px;
+  margin: 15px 10px 30px;
 }
 @media screen and (max-width: 559px) {
   .widget-wrap {
@@ -1855,10 +1863,10 @@ ol.toc {
   }
 }
 .widget-title {
-  margin-bottom: 0;
-}
-.widget {
-  padding: 15px 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #eceff2;
+  margin: 5px 0;
 }
 .widget a {
   color: #f1f1f1;
