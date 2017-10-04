@@ -716,6 +716,11 @@ code {
 #profile .inner .base-info #sitelogo {
   display: block;
   margin: 10px auto 20px;
+  width: 80%;
+}
+#profile.card .inner .base-info #sitelogo {
+  display: block;
+  margin: 10px auto 20px;
   width: 50%;
   max-width: 500px;
 }
