@@ -55,6 +55,9 @@ theme = "hugo-icarus-theme"
     # https://github.com/audreyr/favicon-cheat-sheet
     # You can also add a favicon.ico container at the root of "static" folder
     # Please see the favicon partial template for more information
+    # 1 - Create a favicon folder in "static".
+    # 2 - Create a favicon with 250*250px and 300*300px, named
+    # favicon-250.png and favicon-300.png
     loadFavicon          = false
 
 # Create custom menu entries by defining a name and a url for

@@ -17,12 +17,9 @@
       <link href="{{ $.Site.LanguagePrefix }}/{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
     <link rel="canonical" href="{{ .URL | absLangURL }}"/>
-    <link rel="icon" href="{{ "favicon.ico" | absURL }}">
-    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}"/>
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
     <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
     <link rel="stylesheet" href="{{ "css/academicons.min.css" | absURL }}">
-    <!-- <link rel="stylesheet" href="{{ "css/monokai.css" | absURL }}"> -->
     {{ partial "head_highlightjs" . }}
     <link rel="stylesheet" href="{{ "fancybox/jquery.fancybox.css" | absURL }}">
     {{ range .Site.Params.custom_css }}
