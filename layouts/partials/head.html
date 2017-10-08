@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
     <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
     <link rel="stylesheet" href="{{ "css/academicons.min.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "css/monokai.css" | absURL }}">
+    <!-- <link rel="stylesheet" href="{{ "css/monokai.css" | absURL }}"> -->
+    {{ partial "head_highlightjs" . }}
     <link rel="stylesheet" href="{{ "fancybox/jquery.fancybox.css" | absURL }}">
     {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ . | absURL }}">
