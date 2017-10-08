@@ -60,6 +60,9 @@ theme = "hugo-icarus-theme"
     # favicon-250.png and favicon-300.png
     loadFavicon          = false
 
+    # Number of words of post summary
+    summary_length = 200
+
 # Create custom menu entries by defining a name and a url for
 # them. Since you can also link posts, you can use the weight
 # to define order of appearance.
