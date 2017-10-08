@@ -184,11 +184,17 @@ code {
   margin-top: 64px;
   display: flex;
 }
-@media screen and (max-width: 799px) {
+@media screen and (min-width: 640px) and (max-width: 799px) {
   #container > .outer {
     margin-top: 113px;
   }
 }
+@media screen and (max-width: 639px) {
+#container > .outer {
+    margin-top: 200px;
+}
+}
+
 #main {
   display: block;
   float: left;
@@ -407,6 +413,52 @@ code {
 #sub-nav {
   float: right;
 }
+
+#main-nav li, #main-nav-mobile li  {
+    display: inline-block;
+    position: relative;
+}
+#main-nav ul, #main-nav div > ul,
+#main-nav-mobile ul, #main-nav-mobile div > ul{
+    margin: 0;
+    padding: 0 40px 0 0;
+}
+#main-nav ul li, #main-nav-mobile ul li {
+    display: inline-block;
+    position: relative;
+}
+#main-nav li a, #main-nav-mobile li a {
+    color: #141412;
+    display: block;
+    line-height: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+#main-nav .dropdown-menu,
+#main-nav-mobile .dropdown-menu{
+    background-color: white;
+    padding: 0;
+    position: absolute;
+    left: -2px;
+    z-index: 99999;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+#main-nav ul li:hover > ul, 
+#main-nav ul li:hover > ul, 
+#main-nav ul .focus > ul, 
+#main-nav .focus > ul,
+#main-nav-mobile ul li:hover > ul, 
+#main-nav-mobile ul li:hover > ul, 
+#main-nav-mobile ul .focus > ul, 
+#main-nav-mobile .focus > ul{
+    clip: inherit;
+    overflow: inherit;
+    height: inherit;
+    width: inherit;
+}
 .header-inner {
   height: 100%;
   position: relative;
@@ -469,6 +521,9 @@ code {
 .header-sub ul li a {
   display: inline-block;
   line-height: 48px;
+}
+.header-sub ul li ul li {
+    margin: 0;
 }
 .header-sub .main-nav-link {
   display: inline-block;

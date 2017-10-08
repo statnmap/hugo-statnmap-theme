@@ -13,9 +13,30 @@
         {{end}}
       </a>
       <nav id="main-nav">
+         <div class="navbar-collapse collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              {{ range .Site.Menus.main }}
+              <li class="dropdown">
+                {{ if .HasChildren }}
+                  <a href="{{ .URL | relLangURL }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  {{ range .Children }}
+                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                  {{ end }}
+                </ul>
+                {{ else }}
+                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                {{ end  }}
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+          <!--
           {{ range .Site.Menus.main }}
           <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           {{ end }}
+          -->
+      
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
@@ -25,12 +46,28 @@
     </div>
   </div>
   <div id="main-nav-mobile" class="header-sub header-inner">
+      <div class="navbar-collapse collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {{ range .Site.Menus.main }}
+          <li class="dropdown">
+            {{ if .HasChildren }}
+              <a href="{{ .URL | relLangURL }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+                <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+            {{ else }}
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            {{ end  }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+            
     <table class="menu outer">
       <tbody>
           <tr>
-          {{ range .Site.Menus.main }}
-          <td><a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></td>
-           {{ end }}
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
