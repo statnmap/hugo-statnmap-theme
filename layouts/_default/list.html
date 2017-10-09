@@ -13,11 +13,15 @@
     <article class="article article-type-post" itemscope="" itemprop="blogPost">
         <div class="item-thumbnail">
             <a href="{{ .Permalink }}" lang="{{ .Lang }}" class="thumbnail">
-            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-                <span style="background-image:url({{ .Params.banner | absLangURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
-            {{else}}
-                <span class="thumbnail-image thumbnail-none"></span>
-            {{ end }}
+                {{ if and (isset .Params "thumbnail") (not (eq .Params.thumbnail "")) }}
+                    <span style="background-image:url({{ .Params.thumbnail | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                {{else}}
+                  {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+                      <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+                  {{else}}
+                      <span class="thumbnail-image thumbnail-none"></span>
+                  {{ end }}
+                {{ end }}
             </a>
         </div>
         <div class="article-inner">
