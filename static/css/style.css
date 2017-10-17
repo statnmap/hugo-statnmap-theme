@@ -2008,7 +2008,9 @@ ol.toc {
   color: transparent !important;
   font-size: 0 !important;
 }
-
+.leaflet-container {
+    margin: 10px auto;
+}
 /* Multi-language */
 .lang-translation {
   display: none;
