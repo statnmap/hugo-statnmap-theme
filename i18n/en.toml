@@ -64,6 +64,16 @@
   other = "Tags"
 
 #
+# Contact
+#
+[repliestext]
+  other = "Replies typically within"
+[hours]
+  other = "hours"
+[submit]
+  other = "Submit"
+
+#
 # 404 Page not found
 #
 [page-not-found-title]
