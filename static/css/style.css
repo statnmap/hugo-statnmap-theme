@@ -622,7 +622,6 @@ code {
   height: 40px !important;
   -webkit-border-radius: 21px;
   border-radius: 21px;
-  background
 }
 #search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
 #search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
@@ -833,7 +832,7 @@ code {
   background: #49c8fb;
 }
 #profile .inner .article-info {
-  padding: 0px;
+  padding: 0;
 }
 #profile .inner .article-info:before,
 #profile .inner .article-info:after {
@@ -910,7 +909,7 @@ code {
 }
 #profile.card {
   top: 40px;
-  right: 0px;
+  right: 0;
   z-index: 999;
   display: block;
   min-width: 280px;
@@ -1035,13 +1034,6 @@ a.article-title:hover {
 .article-entry h5,
 .article-entry h6 {
   font-weight: bold;
-}
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
   line-height: 1.3em;
   margin: 1.3em 0;
 }
@@ -1830,6 +1822,18 @@ ol.toc {
   margin-left: 15px;
   line-height: 30px;
 }
+.contact-container {
+    margin: 0 0 40px;
+}
+.contact-container input, .contact-container textarea {
+    width: 50%;
+    min-width: 200px;
+    margin: 5px 0;
+}
+.contact-container textarea {
+    height: 200px;
+}
+
 #footer {
   padding: 20px 0;
   border-top: 1px solid #eceff2;

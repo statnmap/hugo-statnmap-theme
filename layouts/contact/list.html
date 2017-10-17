@@ -1,54 +1,56 @@
-{{ partial "general-title" . }}
-
-{{ partial "header" . }}
-    {{ partial "navbar" . }}
-    <!-- Main -->
-    <div id="main">
-        <article class="post">
-          <header>
-              <div class="title">
-                  {{ if $.Scratch.Get "h1" }}
-                      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                      {{ $.Scratch.Set "h1" false }}
-                  {{ else }}
-                      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                  {{ end }}
-                  {{ with .Description }}
-                      <p>{{ . }}</p>
-                  {{ end }}
-              </div>
-          </header>
-            <div id="content">
-                {{ .Content }}
-                <div class="contact-container">
-                {{ if .Params.netlify }}
-                  <form name="contact" action="thank-you" netlify center width="300px">
-                {{ else }}
-                  <form id="contact" action="//{{ .Params.emailservice }}" method="post" center width="300px">
-                {{ end }}
-                  <h4>{{ i18n "repliestext" }} {{ .Params.contactanswertime }} {{ i18n "hours" }}.</h4>
-                  <fieldset>
-                   <input placeholder="{{ .Params.contactname }}" type="text" name="name" tabindex="1" required autofocus>
-                  </fieldset>
-                  <fieldset>
-                   <input placeholder="{{ .Params.contactemail}}" type="email" name="_replyto" tabindex="2" required>
-                  </fieldset>
-                  <fieldset>
-                  <input placeholder="{{ .Params.contactsubject}}" type="text" name="_subject" tabindex="3" required>
-                  </fieldset>
-                  <fieldset>
-                   <textarea placeholder="{{ .Params.contactmessage}}" name="message" tabindex="4" required></textarea>
-                  </fieldset>
-                  <fieldset>
-                  <input type="hidden" name="_language" value="{{ .Params.contactlang}}">
-                  </fieldset>
-                  <fieldset>
-                   <button name="submit" class="button" type="submit" id="contact-submit" tabindex="5">{{ i18n "submit" }}</button>
-                  </fieldset>
-              </form>
-            </div>
-            </div>
-        </article>
-    </div>
-    {{ partial "sidebar" . }}
-{{ partial "footer" . }}
+{{ define "main" }}
+<!-- Main -->
+<div id="main">
+<article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    <header class="article-header">
+      <a href="{{ .Permalink }}" lang="{{ .Lang }}">
+        <h1 class="article-title" itemprop="name">
+            {{ .Title }}
+        </h1>
+      </a>
+      <div class="article-meta">
+        {{ if .IsTranslated -}}
+          <span class="lang-translation">
+            <a class="active" href="{{ .Permalink }}" lang="{{ .Site.Language.Lang }}">
+              <img src="/flags/{{ .Site.Language.Lang }}.png" alt="{{ .Site.Language.Lang }}" height="15px">
+            </a>
+            {{- $sortedTranslations := sort .Translations "Site.Language.Weight" -}}
+            {{- $links := apply $sortedTranslations "partial" "translation_link.html" "." -}}
+            {{- $cleanLinks := apply $links "chomp" "." -}}
+            {{- $linksOutput := delimit $cleanLinks "&nbsp;" -}}
+            {{ $linksOutput }}
+          </span>
+        {{- end }}
+      </div>
+    </header>
+    <div class="article-entry" itemprop="articleBody">
+      {{ .Content }}
+      <h4>{{ i18n "repliestext" }} {{ .Params.contactanswertime }} {{ i18n "hours" }}.</h4>                
+      <div class="contact-container">
+        <form id="contact" action="//{{ .Params.emailservice }}" method="post" center width="300px">
+          <fieldset>
+          <input placeholder="{{ .Params.contactname }}" type="text" name="name" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+          <input placeholder="{{ .Params.contactemail}}" type="email" name="_replyto" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+          <input placeholder="{{ .Params.contactsubject}}" type="text" name="_subject" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+          <textarea placeholder="{{ .Params.contactmessage}}" name="message" tabindex="4" required></textarea>
+          </fieldset>
+          <fieldset>
+          <input type="hidden" name="_language" value="{{ .Params.contactlang}}">
+          </fieldset>
+          <fieldset>
+          <button name="submit" class="button" type="submit" id="contact-submit" tabindex="5">{{ i18n "submit" }}</button>
+          </fieldset>
+        </form>
+      </div>
+  </div>
+  </div>
+</article>
+</div>
+{{ end }}
