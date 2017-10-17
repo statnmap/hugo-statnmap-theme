@@ -1,6 +1,6 @@
-# Icarus
+# StatnMap theme
 
-Icarus is a responsive and customizable theme for bloggers. It's a port of the same-named theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (l10n) support, syntax highlighting for source code and optional widgets for the sidebar.
+StatnMap theme is issued from Icarus, but I thought changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i18n) support, syntax highlighting for source code and optional widgets for the sidebar.
 
 ![](https://raw.githubusercontent.com/digitalcraftsman/hugo-icarus-theme/master/images/screenshot.png)
 
@@ -9,9 +9,9 @@ Icarus is a responsive and customizable theme for bloggers. It's a port of the s
 I assume you've Git installed. Inside the folder of your Hugo site run
 
     $ cd themes
-    $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
+    $ git clone https://github.com/statnmap/hugo-statnmap-theme.git
 
-You should see a folder called `hugo-icarus-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+You should see a folder called `hugo-statnmap-theme` inside the `themes` directory that we created a few moments ago. For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
 ## Setup
@@ -106,6 +106,16 @@ To disable the inclusion of a previous/next article link at the bottom of the pa
 ## Localization (i18n)
 
 You don't blog in English and you want to translate the theme into different language? No problem. Take a look in the `i18n` folder and you'll find a file `en.toml` that we've copied at the beginning. It contains all strings related to the theme. Copy this file, change the name so that it reflects the translation language (like `fr.toml`) and modify the strings needed.
+
+## Make the contact form working
+
+Since this page will be static, you can use formspree.io as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
+
+1. Enter your email address under ‘emailservice’ in contact/index.md file
+2. Upload the generated site to your server
+3. Send a dummy email yourself to confirm your account
+4. Click the confirm link in the email from formspree.io
+5. You’re done. Happy mailing!
 
 
 ## Linking thumbnails
