@@ -1,5 +1,6 @@
 +++
-banner = ""
+banner = "banners/banner.png"
+thumbnail = "css/images/logo.png"
 categories = []
 date = "2017-05-20T12:10:51+02:00"
 description = ""
