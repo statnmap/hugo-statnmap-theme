@@ -43,6 +43,13 @@
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.Params.avatar | absURL }}"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
+        <div class="right-nav">
+          {{ if .Site.IsMultiLingual }}
+          <div class="lang-switcher-nav">
+            {{ partial "widgets/language_switcher" . }}
+          </div>
+          {{ end }}  
+        </div>        
     </div>
   </div>
   <div id="main-nav-mobile" class="header-sub header-inner">

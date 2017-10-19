@@ -1,0 +1,18 @@
+<div class="widget-wrap">
+    <h3 class="widget-title">{{ .Section }}</h3>
+    <div class="widget">
+        <ul class="category-list">
+          {{ $currentNode := . }}
+          {{ $thisSection := .Section }}
+          {{ range (index .Site.Section) }}
+              {{ if .HasChildren }}
+              <ul class="nav" id="section-list">
+              {{ range .Children }}
+              <li class="{{if $currentNode.IsMenuCurrent $thisSection . }}active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+              {{ end }}
+              </ul>
+              {{end}}
+          {{end}}
+        </ul>
+    </div>
+</div>
