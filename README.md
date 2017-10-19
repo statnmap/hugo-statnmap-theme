@@ -1,5 +1,7 @@
 # StatnMap theme
 
+** Work in progress **
+
 StatnMap theme is issued from [hugo-icarus-theme from digitalcraftsman](https://github.com/digitalcraftsman/hugo-icarus-theme), but I thought visual changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers and freelancers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice).  
 Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i18n) support and language switch, syntax highlighting for source code, contact formular and optional widgets for the sidebar.
 
