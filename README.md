@@ -1,8 +1,9 @@
 # StatnMap theme
 
-StatnMap theme is issued from Icarus, but I thought changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i18n) support, syntax highlighting for source code and optional widgets for the sidebar.
+StatnMap theme is issued from [hugo-icarus-theme from digitalcraftsman](https://github.com/digitalcraftsman/hugo-icarus-theme), but I thought visual changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers and freelancers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice).  
+Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i18n) support and language switch, syntax highlighting for source code, contact formular and optional widgets for the sidebar.
 
-![](https://raw.githubusercontent.com/digitalcraftsman/hugo-icarus-theme/master/images/screenshot.png)
+![](https://github.com/statnmap/hugo-statnmap-theme/blob/master/images/screenshot.png)
 
 ## Get the theme
 
@@ -106,6 +107,14 @@ To disable the inclusion of a previous/next article link at the bottom of the pa
 ## Localization (i18n)
 
 You don't blog in English and you want to translate the theme into different language? No problem. Take a look in the `i18n` folder and you'll find a file `en.toml` that we've copied at the beginning. It contains all strings related to the theme. Copy this file, change the name so that it reflects the translation language (like `fr.toml`) and modify the strings needed.
+
+A language switcher is also available with multilingual website activated. You can add png images of flags named 'lang.png' in 'static/flags' folder, for new languages other than English and French.
+
+The `config.toml` file in `exampleSite` proposes menus for a second language (French). However, as no posts, itemized or contacts are saved with `.fr.md` extension in this exampleSite, menu items may redirect to the `404 not found` page.
+
+If you only have one language for your website, you can remove every `Languages`, `Languages.en` and `Languages.fr` occurences. Simple `[menu.main]` have to be used instead.
+
+Credit: [statnmap]
 
 ## Make the contact form working
 
