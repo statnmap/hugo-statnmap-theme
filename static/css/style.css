@@ -1649,9 +1649,11 @@ ol.toc {
 }
 .layout-wrap-inner.list-categories ul li,
 .layout-wrap-inner.list-categories ul .category-list-child {
-  padding: 10px 0;
-  font-size: 14px;
-  border-bottom: 1px solid border-color;
+    padding: 10px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid border-color;
+    background-color: white;
+    margin-bottom: 10px;
 }
 .layout-wrap-inner.list-categories ul li a,
 .layout-wrap-inner.list-categories ul .category-list-child a {
