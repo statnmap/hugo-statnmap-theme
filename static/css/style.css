@@ -387,7 +387,7 @@ code {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #565a5f;
+  color: #141412;
 }
 #header a:hover {
   color: #38b7ea;
@@ -428,7 +428,6 @@ code {
     position: relative;
 }
 #main-nav li a, #main-nav-mobile li a {
-    color: #141412;
     display: block;
     line-height: 1;
     padding: 10px;
@@ -955,10 +954,10 @@ code {
 }
 .article-header .article-title {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 0.8em;
 }
 .article-title {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #565a5f;
   text-decoration: none;
   line-height: 1.3em;
