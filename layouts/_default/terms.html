@@ -4,13 +4,27 @@
         <span>{{ .Title }}</span>
     </div>
     <div class="layout-wrap-inner list-categories">
+        {{ if .Site.Params.categoriesByCount }}
+            {{ $.Scratch.Set .Data.Plural .Data.Terms.ByCount }}
+        {{ else }}
+            {{ $.Scratch.Set .Data.Plural .Data.Terms.Alphabetical }}
+        {{ end }}      
         <ul class="category-list">
-            {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
-            <li class="category-list-item">
-                <a class="category-list-link" href="{{ $.Site.LanguagePrefix }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
-                <span class="category-list-count">{{ $value.Count }}</span>
-            </li>
-            {{ end }}
+          {{ range $key, $value := $.Scratch.Get .Data.Plural }}
+              <li class="category-list-item">
+                  <article>
+                      <header>
+                          {{ if ne $value.Name "" }}
+                              <a href="{{ printf "/%s/%s" $.Data.Plural $value.Name | urlize | relLangURL }}">{{ $value.Name }}</a>
+                              <span style="float:right;">{{ $value.Count }}</span>
+                          {{ else }}
+                              {{ i18n "uncategorized" }}
+                              <span style="float:right;">{{ $value.Count }}</span>
+                          {{ end }}
+                      </header>
+                  </article>
+              </li>
+          {{ end }}
         </ul>
     </div>
 </section>
