@@ -3,7 +3,7 @@
 ** Work in progress **
 
 StatnMap theme is issued from [hugo-icarus-theme from digitalcraftsman](https://github.com/digitalcraftsman/hugo-icarus-theme), but I thought visual changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers and freelancers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). The theme has been revamped to look like wordpress twenty-fifteen theme.  
-Noteworthy features of this Hugo theme are the integration of a comment-system powered by Disqus, localization (i18n) support and language switch, syntax highlighting for source code, contact formular and optional widgets for the sidebar.
+Noteworthy features of this Hugo theme are the integration of a comment-system powered by **Disqus**, **localization (i18n)** support and **language switch**, **syntax highlighting** for source code, **contact formular** and optional widgets for the sidebar.
 
 ![](https://github.com/statnmap/hugo-statnmap-theme/blob/master/images/screenshot.png)
 
@@ -128,6 +128,7 @@ Since this page will be static, you can use formspree.io as proxy to send the ac
 4. Click the confirm link in the email from formspree.io
 5. You’re done. Happy mailing!
 
+Credit: [statnmap]
 
 ## Linking thumbnails
 
@@ -135,8 +136,15 @@ After creating a new post you can define a banner by entering the relative path 
 
     banner = "banners/placeholder.png"
 
+Credit: [digitalcraftsman]
+
+A thumbnail will be used for the recent_articles list in the sidebar as well as in the normal list of articles. If you want a specific thumbnail instead of the banner croped, you can define it by entering the relative path to the thumbnail.
+
+    thmubnail = "banners/thumbnail.png"
+
 This way you can store them either next to the content file or in the `static` folder.
 
+Credit: [statnmap]
 
 ## Mathematical equations
 
@@ -146,6 +154,22 @@ You can also print formulas inline. In this case wrap the formula only once with
 
 If you don't need equations, you can disable MathJax but putting `disable_mathjax = true` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
 
+MathJax CDN and versions can be modified in the `config.toml` file:
+
+    MathJaxCDN = "//cdn.bootcss.com"
+    MathJaxVersion = "2.7.1"
+
+## Syntax highlighting
+
+Syntax highlighting for code is allowed with `highlight.js`. This can be disabled in the `config.toml`. Version, additional languages, CDN and theme can also be modified.
+
+    disable_highlight = false
+    highlightjsVersion = "9.11.0"
+    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+Credit: [yihui, statnmap]
 
 ### Gallery shortcode
 
@@ -164,12 +188,12 @@ In order to see your site in action, run Hugo's built-in local server.
 
     $ hugo server
 
-Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+Now enter [`localhost:4321`](http://localhost:4321) in the address bar of your browser.
 
 
 ## Contributing
 
-Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/digitalcraftsman/hugo-icarus-theme/issues) to let me know. Or make directly a [pull request](//github.com/digitalcraftsman/hugo-icarus-theme/pulls).
+Have you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](//github.com/statnmap/hugo-statnmap-theme/issues) to let me know. Or make directly a [pull request](//github.com/statnmap/hugo-statnmap-theme/pulls).
 
 
 ## License
@@ -181,5 +205,6 @@ This theme is released under the MIT license. For more information read the [lic
 
 Thanks to 
 
-- [Ruipeng Zhang](https://github.com/ppoffice) for creating this theme
+- [Digitalcraftsman](//github.com/digitalcraftsman/hugo-icarus-theme) for the original Hugo-icarus-theme
+- [Ruipeng Zhang](//github.com/ppoffice) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
