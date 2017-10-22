@@ -186,12 +186,12 @@ code {
 }
 @media screen and (min-width: 640px) and (max-width: 799px) {
   #container > .outer {
-    margin-top: 113px;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 639px) {
 #container > .outer {
-    margin-top: 200px;
+    margin-top: 150px;
 }
 }
 
@@ -548,12 +548,7 @@ code {
     display: none;
   }
 }
-@media screen and (min-width: 800px) and (max-width: 1199px) {
-  #main-nav-mobile {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   #main-nav-mobile {
     display: none;
   }
@@ -703,8 +698,10 @@ code {
 #main-nav-mobile .menu:after {
   clear: both;
 }
+#main-nav-mobile .search-form {
+  display: none;  
+}
 #main-nav-mobile .menu .search-form-input {
-  display: none;
   padding: 0 10px;
   margin-right: 15px;
   height: 32px;
@@ -713,7 +710,7 @@ code {
   border-radius: 16px;
 }
 @media screen and (max-width: 639px) {
-  #main-nav-mobile .menu .search-form-input {
+  #main-nav-mobile .search-form {
     display: block;
   }
 }
@@ -2004,11 +2001,6 @@ ol.toc {
 .widget ol:not(#recent-post) li a:hover:before {
   color: #38b7ea;
 }
-.widget ul.language li a:before,
-.widget ol.language li a:before {
-  color: transparent !important;
-  font-size: 0 !important;
-}
 .leaflet-container {
     margin: 10px auto;
 }
@@ -2058,10 +2050,14 @@ ol.toc {
 #header .lang-switcher img {
     display: block;
     margin: auto;
-    padding: 19.5px 15px;
+    padding: 19.5px 5px;
     height: 25px;
+    float: left;
 }
-
+#header .outer .lang-switcher-nav .fa {
+    height: 25px;
+    padding: 25px 0 14px;
+}
 #header .outer .lang-switcher:hover > ul, 
 #header .outer .lang-switcher:hover > ul, 
 #header .outer .lang-switcher:focus > ul, 

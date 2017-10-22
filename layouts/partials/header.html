@@ -31,27 +31,21 @@
               {{ end }}
             </ul>
           </div>
-          <!--
-          {{ range .Site.Menus.main }}
-          <a class="main-nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-          {{ end }}
-          -->
-      
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
             <a id="profile-anchor" href="javascript:;"><img class="avatar" src="{{ .Site.Params.avatar | absURL }}"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
-        <div class="right-nav">
+        <nav class="right-nav">
           {{ if .Site.IsMultiLingual }}
           <div class="lang-switcher-nav">
             {{ partial "widgets/language_switcher" . }}
           </div>
           {{ end }}  
-        </div>        
-    </div>
-  </div>
+        </nav>   
+    </div>     
+  </div> 
   <div id="main-nav-mobile" class="header-sub header-inner">
       <div class="navbar-collapse collapse" id="navigation">
         <ul class="nav navbar-nav navbar-right">
@@ -72,7 +66,7 @@
         </ul>
       </div>
             
-    <table class="menu outer">
+    <table class="menu outer search-form">
       <tbody>
           <tr>
           <td>
@@ -84,5 +78,6 @@
       </tr>
       </tbody>
     </table>
-  </div>
+  </div>  
 </header>
+
