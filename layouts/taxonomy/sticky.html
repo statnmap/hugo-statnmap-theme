@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ if isset .Site.Taxonomies "sticky" }}
+    {{ partial "list_first_plain_sticky" . }}
+  {{ end }}
+{{ end }}
+
+

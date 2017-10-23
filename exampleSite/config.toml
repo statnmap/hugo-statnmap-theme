@@ -80,6 +80,11 @@ theme = "hugo-statnmap-theme"
 # for more information
 DefaultContentLanguage = "en"
   
+[Taxonomies]
+  tag = "tags"
+  category = "categories"
+  sticky = "stickies"
+
 [Languages]
 [Languages.en]
 LanguageName = "English"
@@ -95,6 +100,16 @@ weight = 1
 [[Languages.en.menu.main]]
 name = "Blog"
 url = "/post/"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "Sticky"
+url = "/stickies/"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "StickyPages"
+url = "/stickypages/"
 weight = 2
 
 [[Languages.en.menu.main]]
