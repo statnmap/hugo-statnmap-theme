@@ -114,7 +114,7 @@ A language switcher is also available with multilingual website activated. You c
 
 The `config.toml` file in `exampleSite` proposes menus for a second language (French). However, as no posts, itemized or contacts are saved with `.fr.md` extension in this exampleSite, menu items may redirect to the `404 not found` page.
 
-If you only have one language for your website, you can remove every `Languages`, `Languages.en` and `Languages.fr` occurences. Simple `[menu.main]` have to be used instead.
+If you only have one language for your website, you can remove every `Languages`, `Languages.en` and `Languages.fr` occurrences. Simple `[menu.main]` have to be used instead.
 
 Credit: [statnmap]
 
