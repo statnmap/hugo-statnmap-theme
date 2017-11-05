@@ -1716,12 +1716,24 @@ ol.toc {
 }
 
 .archives .thumbnail span {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   display: block;
 }
 .archives .article-header, .archives .article-entry {
-    padding: 0px 10px 10px 220px;
+    padding: 0px 10px 10px 170px;
+}
+.archives .article-header .article-title {
+    margin-bottom: 0.5em;
+}
+.archives .article-entry p {
+    margin: 0.4em 0 1.6em;
+}
+.archives .article-entry p {
+    margin: 0.4em 0 1.6em;
+}
+.archives .article-entry .article-more-link {
+    margin: 0.5em 0 0.2em;
 }
 @media screen and (max-width: 980px) {
   .archives .thumbnail span {
@@ -1742,7 +1754,7 @@ ol.toc {
     margin: 30px 0;
     padding: 10px;
     background: white;
-    min-height: 200px;
+    min-height: 170px;
 }
 .archives .article-inner {
     box-shadow: unset;
