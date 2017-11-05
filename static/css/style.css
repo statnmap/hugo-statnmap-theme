@@ -1766,6 +1766,9 @@ ol.toc {
 .archives .article-header h1 {
     color: #333;
 }
+.archives .article-header h1:hover {
+    color: #38b7ea;
+}
 
 .layout-wrap-inner.list-categories ul {
   margin-left: 15px;
