@@ -34,6 +34,11 @@ theme = "hugo-statnmap-theme"
     # Only for small devices
     logolong = "css/images/logo.png"
     
+    # Set to true to disable code folding
+    disable_codefolding = false
+    # Set to "hide" or "show" all codes by default
+    codefolding_show = "hide"
+    
     disable_mathjax = false # set to true to disable MathJax
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
