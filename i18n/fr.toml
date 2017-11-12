@@ -29,6 +29,16 @@
   other = "posté le {{ .Count }}"
 
 #
+# Code folding
+#
+[showhide_all_code]
+  other = "Afficher/Cacher codes"
+[show_all_code]
+  other = "Afficher tous codes"
+[hide_all_code]
+  other = "Cacher tous codes"
+
+#
 # widgets
 #
 [widget-cat-title]
