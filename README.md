@@ -172,7 +172,7 @@ Syntax highlighting for code is allowed with `highlight.js`. This can be disable
 Credit: [yihui, statnmap]
 
 ## Code folding
-Code folding is enabled by default with `disable_codefolding = false` in parameters of the `config` file. It uses somes javascript libraries of [bootstrap](https://getbootstrap.com/docs/3.3/javascript/). Code folding buttons only appear when there is code in the document rendered from `Rmd` in blogdown. `disable_codefolding` can also be used in each article header.
+Code folding is enabled by default with `disable_codefolding = false` in parameters of the `config` file. It uses somes javascript libraries of [bootstrap](https://getbootstrap.com/docs/3.3/javascript/). Code folding buttons only appear when there is code in the document rendered from `Rmd` in blogdown. `disable_codefolding` can also be used in each article config header. Similarly, you can define if code blocks are shown or hidden by default using `codefolding_show = "hide"` in the config file or in each article config.
 
 ## Sticky list pages
 
