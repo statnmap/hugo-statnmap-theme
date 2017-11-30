@@ -1,9 +1,9 @@
 {{ if gt (len .Site.Languages) 2 }}
-  <li class="lang-switcher dropdown more-than-two-lang">  
+  <li class="lang-switcher main-dropdown more-than-two-lang">  
     <a class="active" href="{{ .Permalink }}" lang="{{ .Site.Language.Lang }}">
       <img src="/flags/{{ .Site.Language.Lang }}.png" alt="{{ .Site.Language.Lang }}"><i class="fa fa-angle-down" style="position: relative;"></i>
     </a>
-    <ul class="dropdown-menu">
+    <ul class="main-dropdown-menu">
     {{ if .IsTranslated -}}
       {{ range .Translations }}
           <li><a href="{{ .Permalink }}" lang="{{ .Lang }}">
@@ -23,11 +23,11 @@
     </ul>
   </li>
 {{ else }}
-  <li class="lang-switcher dropdown two-lang">  
+  <li class="lang-switcher main-dropdown two-lang">  
     <a class="active" href="{{ .Permalink }}" lang="{{ .Site.Language.Lang }}">
       <img src="/flags/{{ .Site.Language.Lang }}.png" alt="{{ .Site.Language.Lang }}"><i class="fa fa-angle-down" style="position: relative;"></i>
     </a>
-    <ul class="dropdown-menu">
+    <ul class="main-dropdown-menu">
     {{ if .IsTranslated }}
       {{ range .Translations }}
           <li><a href="{{ .Permalink }}" lang="{{ .Lang }}">

@@ -16,10 +16,10 @@
          <div class="navbar-collapse collapse" id="navigation">
             <ul class="nav navbar-nav navbar-right">
               {{ range .Site.Menus.main }}
-              <li class="dropdown">
+              <li class="main-dropdown">
                 {{ if .HasChildren }}
-                  <a href="{{ .URL | relLangURL }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
-                <ul class="dropdown-menu">
+                  <a href="{{ .URL | relLangURL }}" class="main-dropdown-toggle" data-toggle="main-dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+                <ul class="main-dropdown-menu">
                   {{ range .Children }}
                     <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                   {{ end }}
@@ -50,10 +50,10 @@
       <div class="navbar-collapse collapse" id="navigation">
         <ul class="nav navbar-nav navbar-right">
           {{ range .Site.Menus.main }}
-          <li class="dropdown">
+          <li class="main-dropdown">
             {{ if .HasChildren }}
-              <a href="{{ .URL | relLangURL }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+              <a href="{{ .URL | relLangURL }}" class="main-dropdown-toggle" data-toggle="main-dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+            <ul class="main-dropdown-menu">
               {{ range .Children }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
               {{ end }}

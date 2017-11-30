@@ -433,8 +433,8 @@ code {
     padding: 10px;
     text-decoration: none;
 }
-#main-nav .dropdown-menu,
-#main-nav-mobile .dropdown-menu{
+#main-nav .main-dropdown-menu,
+#main-nav-mobile .main-dropdown-menu {
     background-color: white;
     padding: 0;
     position: absolute;
@@ -2219,7 +2219,7 @@ ol.toc {
   display: block;
   height: 100%;
 }
-#header .outer .lang-switcher .dropdown-menu {
+#header .outer .lang-switcher .main-dropdown-menu {
     padding: 0;
     position: absolute;
     z-index: 99999;
@@ -2230,7 +2230,7 @@ ol.toc {
     top: 100%;
     display: grid;
 }
-#header .outer .lang-switcher .dropdown-menu li {
+#header .outer .lang-switcher .main-dropdown-menu li {
     background-color: white;
 }
 #header .lang-switcher img {
