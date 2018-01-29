@@ -27,7 +27,9 @@
   other = "Plus récent"
 [postedOnDate]
   other = "posté le {{ .Count }}"
-
+[related_articles]
+  other = "Articles similaires"
+  
 #
 # Code folding
 #

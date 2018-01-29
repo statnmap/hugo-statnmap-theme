@@ -1786,6 +1786,49 @@ ol.toc {
 .article-entry .col-md-12 {
     margin: 0 0 0 auto;
 }
+/* Related articles */
+.related-articles {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.related-articles h3 {
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: bold;
+    color: #565a5f;
+    text-transform: uppercase;
+}
+.related-articles ul li ul {
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+.related-articles .title a {
+    font-size: 1.2em;
+}
+.related-articles .item-banner {
+    width: 100%;
+    height: 8em;
+}
+.related-articles .item-banner a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.related-articles .item-banner .banner-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.related-articles .item-banner .banner-none {
+  background-image: url("images/StatnMap-banner-no-image.jpg");
+}
+
 /* Main show/hide button */
 #code-folding-buttons {float: right;}
 #code-folding-buttons .pull-right > .dropdown-menu {
@@ -2143,7 +2186,7 @@ ol.toc {
 .widget ol li,
 .widget ul .category-list-child,
 .widget ol .category-list-child {
-  padding: 10px 0;
+  padding: 2px 0;
   font-size: 14px;
   border-bottom: 1px solid border-color;
 }

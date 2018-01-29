@@ -1,0 +1,26 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+<div class="related-articles">
+<h3>{{ i18n "related_articles" }}</h3>
+<ul>
+	<li>
+	{{ range . }}
+	  <ul>
+  	<div class="item-banner">
+      <a href="{{ .RelPermalink }}" lang="{{ .Lang }}" class="banner">
+        {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+            <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ .Title }}" class="banner-image"></span>
+        {{else}}
+            <span class="banner-image banner-none"></span>
+        {{ end }}
+      </a>
+    </div>
+    <span class="title">
+  	  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  	</span>
+  	</ul>
+	{{ end }}
+	</li>	
+</ul>
+</div>
+{{ end }}
