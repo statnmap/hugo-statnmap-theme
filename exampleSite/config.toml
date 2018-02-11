@@ -194,3 +194,7 @@ weight = 5
     categories = true
     tags = true
     tag_cloud = true
+
+# Set the followings to true as part of your site SEO
+enableRobotsTXT = true
+canonifyURLs = true

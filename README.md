@@ -174,6 +174,8 @@ Credit: [yihui, statnmap]
 ## Code folding
 Code folding is enabled by default with `disable_codefolding = false` in parameters of the `config` file. It uses somes javascript libraries of [bootstrap](https://getbootstrap.com/docs/3.3/javascript/). Code folding buttons only appear when there is code in the document rendered from `Rmd` in blogdown. `disable_codefolding` can also be used in each article config header. Similarly, you can define if code blocks are shown or hidden by default using `codefolding_show = "hide"` in the config file or in each article config.
 
+Credit: [statnmap]
+
 ## Sticky list pages
 
 A special kind of posts list is implemented. This allows to show the first article completely and the other articles as a list with summaries. For that, we use the implemented template `list_first_plain_sticky.html` in `partial`. You can use it in two ways:  
@@ -228,6 +230,36 @@ This shortcode you to easily include a gallery into your pages. Copy the code be
         "/banners/placeholder.png"
     >}}
 
+## Hugo's website SEO
+
+This theme support SEO elements for your website.
+It was adapted and integrated thanks to the following guide:  
+[https://keithpblog.org/post/hugo-website-seo/](https://keithpblog.org/post/hugo-website-seo/)
+
+If you wish to enable SEO on this theme, follow these instructions:
+1. To include the following parameters in your _config.toml_
+```
+# .config.toml
+...
+enableRobotsTXT = true
+canonifyURLs = true
+# and if you think your md file names or locations might change:
+[permalinks]
+    post = "/blog/:title/"
+...
+```
+
+2. Add your website to Google Search Console:
+    - Login to the [Google Search Console](https://www.google.com/webmasters/tools/home)
+    - Add your website as property
+    - Add the html page as required by google to verify ownership
+    - Submit the sitemap (/sitemap.xml) for indexing
+    - Wait
+
+3. Add your website to Bing 
+    - Login to the [Bing Webmaster Console](https://www.bing.com/toolbox/webmaster/)
+    - Add your site, details and verify
+    - From the 3 option, we recommend adding the xml file to you website
 
 ## Nearly finished
 
