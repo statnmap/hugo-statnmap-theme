@@ -14,13 +14,13 @@
         {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ end }}
       {{ with .Site.Params.bio }}<h3 id="title">{{ . | safeHTML }}</h3>{{ end }}
-      {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
+      {{ with .Site.Params.location }}<span id="location"><i class="fas fa-map-marker"></i>{{ . }}</span>{{ end }}
     </div>
     <div class="profile-block social-links">
       <table>
         <tr>
           {{ partial "social" . }}
-          <td><a href="{{ .Site.RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="{{ .Site.RSSLink }}" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
