@@ -1,7 +1,5 @@
 # StatnMap theme
 
-** Work in progress **
-
 StatnMap theme is issued from [hugo-icarus-theme from digitalcraftsman](https://github.com/digitalcraftsman/hugo-icarus-theme), but I thought visual changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers and freelancers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). The theme has been revamped to look like wordpress twenty-fifteen theme.  
 Noteworthy features of this Hugo theme are the integration of a comment-system powered by **Disqus**, **localization (i18n)** support and **language switch**, **syntax highlighting** for source code, **contact formular** and optional widgets for the sidebar.
 
@@ -218,9 +216,39 @@ This is implemented in the `exampleSite`.
     + Create a folder `content` > `sticky_pages` (This is done in the `exampleSite`)
     + Add a page. The newest page or the page with `weight = 1` will be shown entirely before the other of the same taxonomy (that will only show a summary)
 
-[Credit: statnmap]
+Credit: [statnmap]
 
-### Gallery shortcode
+## Related articles
+
+You can define parameters for related articles at the bottom of blog posts.
+
+[related]
+  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
+  threshold = 50
+  # To get stable "See also" sections we, by default, exclude newer related pages.
+  includeNewer = true
+  # Will lower case keywords in both queries and in the indexes.
+  toLower = true
+[[related.indices]]
+name = "keywords"
+weight = 150
+[[related.indices]]
+name  = "author"
+toLower = true
+weight = 30
+[[related.indices]]
+name  = "tags"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+
+See <https://gohugo.io/content-management/related/> for more informations.
+
+Credit: [statnmap]
+
+## Gallery shortcode
 
 This shortcode you to easily include a gallery into your pages. Copy the code below into your content file and enter the relative paths to your images.
 
@@ -287,3 +315,8 @@ Thanks to
 - [Digitalcraftsman](//github.com/digitalcraftsman/hugo-icarus-theme) for the original Hugo-icarus-theme
 - [Ruipeng Zhang](//github.com/ppoffice) for creating this theme
 - [Steve Francia](//github.com/spf13) for creating Hugo and the awesome community around the project
+
+
+[digitalcraftsman]: //github.com/digitalcraftsman
+[statnmap]: https://github.com/statnmap
+[yihui]: https//github.com/yihui

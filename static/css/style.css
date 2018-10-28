@@ -2292,8 +2292,12 @@ ol.toc {
     margin: auto;
     padding: 19.5px 5px;
     height: 25px;
-    float: left;
+    /*float: left; */
 }
+#header .lang-switcher ul li img {
+    padding: 0 5px;
+}
+
 #header .outer .lang-switcher-nav .fa {
     height: 25px;
     padding: 25px 0 14px;
