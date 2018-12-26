@@ -34,11 +34,15 @@
 # Code folding
 #
 [showhide_all_code]
-  other = "Afficher/Cacher codes"
+  other = "Afficher/Masquer codes"
 [show_all_code]
   other = "Afficher tous codes"
 [hide_all_code]
-  other = "Cacher tous codes"
+  other = "Masquer tous codes"
+[hide_code]
+  other = "Masquer"
+[show_code]
+  other = "Code"
 
 #
 # widgets
