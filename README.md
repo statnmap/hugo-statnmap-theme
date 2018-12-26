@@ -5,6 +5,38 @@ Noteworthy features of this Hugo theme are the integration of a comment-system p
 
 ![](https://github.com/statnmap/hugo-statnmap-theme/blob/master/images/screenshot.png)
 
+
+## Table of Contents
+
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Table of Contents](#table-of-contents)
+- [Get the theme](#get-the-theme)
+- [Setup](#setup)
+	- [Comments](#comments)
+	- [Menu](#menu)
+	- [Sidebars](#sidebars)
+	- [Tell me who you are](#tell-me-who-you-are)
+	- [Widgets](#widgets)
+	- [Date line](#date-line)
+- [Multilanguage](#multilingual)
+- [Contact form](#contact-form)
+- [Linking thumbnails](#linking-thumbnails)
+- [Mathematical equations](#mathematical-equations)
+- [Syntax highlighting](#syntax-highlighting)
+- [Code Folding](#code-folding)
+- [Sticky list pages](#sticky-list-pages)
+- [Related articles](#related-articles)
+- [Gallery shortcode](#gallery-shortcode)
+- [Citation](#citation)
+- [Related articles](#related-articles)
+- [Website SEO](#website-seo)
+- [Nearly finished](#nearly-finished)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+
 ## Get the theme
 
 I assume you've Git installed. Inside the folder of your Hugo site run
@@ -104,7 +136,7 @@ The date line includes: post date, # of words, approximate reading, time tags an
 
 To disable the inclusion of a previous/next article link at the bottom of the page, add `noprevnext = true` to the front matter. This feature, along with `nodateline` can be used to create standalone pages that are less "blog-like"
 
-## Localization (i18n)
+## Multilingual
 
 You don't blog in English and you want to translate the theme into different language? No problem. Take a look in the `i18n` folder and you'll find a file `en.toml` that we've copied at the beginning. It contains all strings related to the theme. Copy this file, change the name so that it reflects the translation language (like `fr.toml`) and modify the strings needed.
 
@@ -116,7 +148,7 @@ If you only have one language for your website, you can remove every `Languages`
 
 Credit: [statnmap]
 
-## Make the contact form working
+## Contact form
 
 Since this page will be static, you can use formspree.io as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Begin the setup by following the steps below:
 
@@ -167,10 +199,12 @@ Syntax highlighting for code is allowed with `highlight.js`. This can be disable
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
 
-Credit: [yihui, statnmap]
+Credit: [yihui] [statnmap]
 
 ## Code folding
-Code folding is enabled by default with `disable_codefolding = false` in parameters of the `config` file. It uses somes javascript libraries of [bootstrap](https://getbootstrap.com/docs/3.3/javascript/). Code folding buttons only appear when there is code in the document rendered from `Rmd` in blogdown. `disable_codefolding` can also be used in each article config header. Similarly, you can define if code blocks are shown or hidden by default using `codefolding_show = "hide"` in the config file or in each article config.
+Code folding is enabled by default with `disable_codefolding = false` in parameters of the `config` file. It uses somes javascript libraries of [bootstrap](https://getbootstrap.com/docs/3.3/javascript/). Code folding (multilingual) buttons only appear when there is code in the document rendered from `Rmd` in blogdown. `disable_codefolding` can also be used in each article config header. Similarly, you can define if code blocks are shown or hidden by default using `codefolding_show = "hide"` in the config file or in each article config.  
+The list of `<pre>` blocks on which to apply code folding is defined in the `config` file: 
+`codeblocks = ["pre.sourceCode", "pre.r", "pre.python"]`
 
 Credit: [statnmap]
 
@@ -248,6 +282,13 @@ See <https://gohugo.io/content-management/related/> for more informations.
 
 Credit: [statnmap]
 
+## Citation
+
+As for [Radix](https://rstudio.github.io/radix/), a citation field can be added to blog posts. Citation is enabled by default with `disable_citation = false` in parameters of the `config` file. It can also be enabled or disabled in each blog post with `disable_citation` in the post YAML / TOML. By default author comes from blog `author` field in the article header but `citation_author` overrides this field if another writing is needed.
+Code is adapted from: Yihan Wu. (2018-12-21). "Blogdown - shortcode for radix-like Bibtex". Retrieved from https://www.yihanwu.ca/post/blogdown-shortcode-generation-for-bibtex/.
+
+Credit: [statnmap]
+
 ## Gallery shortcode
 
 This shortcode you to easily include a gallery into your pages. Copy the code below into your content file and enter the relative paths to your images.
@@ -258,7 +299,40 @@ This shortcode you to easily include a gallery into your pages. Copy the code be
         "/banners/placeholder.png"
     >}}
 
-## Hugo's website SEO
+
+## Related articles
+
+You can define parameters for related articles at the bottom of blog posts.
+
+```
+[related]
+  # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
+  threshold = 50
+  # To get stable "See also" sections we, by default, exclude newer related pages.
+  includeNewer = true
+  # Will lower case keywords in both queries and in the indexes.
+  toLower = true
+[[related.indices]]
+name = "keywords"
+weight = 150
+[[related.indices]]
+name  = "author"
+toLower = true
+weight = 30
+[[related.indices]]
+name  = "tags"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+```
+
+See <https://gohugo.io/content-management/related/> for more informations.
+
+Credit: [statnmap]
+
+## Website SEO
 
 This theme support SEO elements for your website.
 It was adapted and integrated thanks to the following guide:  

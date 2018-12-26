@@ -38,6 +38,8 @@ theme = "hugo-statnmap-theme"
     disable_codefolding = false
     # Set to "hide" or "show" all codes by default
     codefolding_show = "hide"
+    # Code blocks to apply code folding
+    codeblocks = ["pre.sourceCode", "pre.r", "pre.python", "pre.bash", "pre.sql", "pre.cpp", "pre.stan", "pre.js", "pre.css", "pre.html", "pre.yaml"]
     
     disable_mathjax = false # set to true to disable MathJax
     MathJaxCDN = "//cdn.bootcss.com"
