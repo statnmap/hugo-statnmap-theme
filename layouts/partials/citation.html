@@ -1,0 +1,29 @@
+{{ if and (not .Site.Params.disable_citation) (not .Params.disable_citation) }}
+{{ if isset .Page.Params "citation_author" }}
+  {{ $.Scratch.Set "author" .Page.Params.citation_author}}
+{{ else }}
+  {{ if isset .Site.Params "citation_author" }}
+    {{ $.Scratch.Set "author" .Site.Params.citation_author}}
+  {{ else }}
+    {{$.Scratch.Set "author" .Page.Params.author}}
+  {{ end }}
+{{ end }}
+<br/>
+<hr>
+<div class="citation">
+<h6>{{ i18n "citation" }}</h6>
+<p>{{ i18n "please_cite_as" }}<br/>
+<code>
+{{ ($.Scratch.Get "author")}}. ({{dateFormat "2006, Jan. 02" $.Page.Params.date }}). "{{$.Page.Params.title}}". Retrieved from {{ $.Page.Permalink | absLangURL }}.
+</code>
+</p><br/>
+{{ i18n "bibtex_citation" }}
+<pre><code>@misc&#123;{{$name_string := replace ($.Scratch.Get "author") " " ""}}{{substr $name_string 0 5}}{{dateFormat "2006" $.Page.Params.date }}{{ $title := replace $.Page.Params.title " " ""}}{{substr $title 0 5}},
+    author = {{printf "{%s}" ($.Scratch.Get "author")}},
+    title = {{$title_str := $.Page.Params.title}}{{printf "{%s}" $title_str}},
+    url = {{$url_str := ($.Page.Permalink | absLangURL)}}{{printf "{%s}" $url_str}},
+    year = {{$year_str := dateFormat "2006" $.Page.Params.date }}{{printf "{%s}" $year_str}}
+  &#125;
+</code></pre>
+</div>
+{{ end }}

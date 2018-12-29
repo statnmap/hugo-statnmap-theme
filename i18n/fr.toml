@@ -98,3 +98,10 @@
 [page-not-found-subtitle]
   other = "Le contenu que vous cherchez ne semble pas exister."
 
+# Citation
+[citation]
+  other = "Citation :"
+[please_cite_as]
+  other = "Merci de citer ce travail avec :"
+[bibtex_citation]
+  other = "Citation BibTex :"
