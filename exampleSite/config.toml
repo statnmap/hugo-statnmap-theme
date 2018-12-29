@@ -52,6 +52,10 @@ theme = "hugo-statnmap-theme"
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
     
+    # How to cite blog article
+    disable_citation = false
+    citation_author = "Author A"
+   
     # define which types of pages should be shown. By default the type with the most regular pages
     mainSections = ["post"]
 

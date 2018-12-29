@@ -7,6 +7,7 @@
         {{ partial "article_header" . }}
         <div class="article-entry" itemprop="articleBody">
             {{ .Content }}
+            {{ partial "citation" . }}
         </div>
         {{ partial "article_footer" . }}
     </div>
