@@ -14,7 +14,7 @@
         {{end}}
       </a>
       <nav id="main-nav">
-         <div href="{{ .URL | relLangURL }}" class="navbar-collapse collapse" id="navigation">
+         <div href="{{ .Permalink | relLangURL }}" class="navbar-collapse collapse" id="navigation">
             <ul class="nav navbar-nav navbar-right">
               {{ range .Site.Menus.main }}
               <li class="main-dropdown">

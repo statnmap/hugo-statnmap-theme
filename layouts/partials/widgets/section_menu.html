@@ -8,7 +8,7 @@
               {{ if .HasChildren }}
               <ul class="nav" id="section-list">
               {{ range .Children }}
-              <li class="{{if $currentNode.IsMenuCurrent $thisSection . }}active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+              <li class="{{if $currentNode.IsMenuCurrent $thisSection . }}active{{end}}"><a href="{{.RelPermalink}}">{{ .Name }}</a></li>
               {{ end }}
               </ul>
               {{end}}

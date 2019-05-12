@@ -1,6 +1,6 @@
 {{ if (not .Params.disable_highlight) }}
 {{ $highTheme := .Site.Params.highlightjsTheme }}
 {{ with .Site.Params.highlightjsVersion }}
-<link href='{{ $.Site.Params.highlightjsCDN | default "//cdn.bootcss.com" }}/highlight.js/{{ . }}/styles/{{ $highTheme }}.min.css' rel='stylesheet' type='text/css' />
+<link href='{{ site.Params.highlightjsCDN | default "//cdn.bootcss.com" }}/highlight.js/{{ . }}/styles/{{ $highTheme }}.min.css' rel='stylesheet' type='text/css' />
 {{ end }}
 {{ end }}

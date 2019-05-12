@@ -2,7 +2,7 @@
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       {{ with .Site.Params.sitelogo }}
-      <a href="{{ $.Site.BaseURL | relLangURL }}" title="{{ $.Site.Title }}">
+      <a href="{{ site.BaseURL | relLangURL }}" title="{{ site.Title }}">
         <img id="sitelogo" src="{{ . | absURL }}">
       </a>
       {{ else }}
@@ -20,7 +20,7 @@
       <table>
         <tr>
           {{ partial "social" . }}
-          <td><a href="{{ .Site.RSSLink }}" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></td>
+          <td><a href="{{ .Site.Params.url | absLangURL }}post/index.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></td>
         </tr>
       </table>
     </div>

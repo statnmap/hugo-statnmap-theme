@@ -11,9 +11,9 @@ knitr::opts_chunk$set(echo = TRUE)
 StatnMap theme is issued from [hugo-icarus-theme by digitalcraftsman](https://github.com/digitalcraftsman/hugo-icarus-theme), but I thought visual changes were to big to keep it as a fork. This is a responsive and customizable theme for bloggers and freelancers. It's originally a port of the Icarus theme for [Hexo](//hexo.io) made by [Ruipeng Zhang](https://github.com/ppoffice). The theme has been revamped to look like wordpress twenty-fifteen theme.  
 Noteworthy features of this Hugo theme are the integration of a comment-system powered by **Disqus**, **multilingual** support and **language switch**, **syntax highlighting** and **code folding** for source code, **how-to-cite card** and **related articles** sections on bottom of articles, **contact form** and optional widgets for the sidebar.
 
-![](https://github.com/statnmap/hugo-statnmap-theme/blob/master/images/screenshot.png)
+![](https://github.com/statnmap/hugo-statnmap-theme/raw/master/images/screenshot.png)
 
-
+*Requires Hugo version > v0.55*
 You can see a live example here: <https://statnmap.com>  
 
 ## Table of Contents

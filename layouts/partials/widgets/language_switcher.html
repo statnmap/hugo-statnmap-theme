@@ -12,7 +12,7 @@
       {{ end }}
     {{ else }}
       {{ range .Site.Languages }}
-        {{ if not (eq .Lang $.Site.Language.Lang) }}
+        {{ if not (eq .Lang site.Language.Lang) }}
         <li><a href="/{{ .Lang }}" lang="{{ .Lang }}" class="no-translation">
             <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
             <img alt="fr" src="/flags/Flag_NoTr.png" style="position: relative;top: -50%;width: 100%;padding: 0;margin: auto;">
@@ -36,7 +36,7 @@
       {{ end }}
     {{ else }}
       {{ range .Site.Languages }}
-        {{ if not (eq .Lang $.Site.Language.Lang) }}
+        {{ if not (eq .Lang site.Language.Lang) }}
         <li><a href="" lang="{{ .Lang }}" class="no-translation">
             <img src="/flags/{{ .Lang }}.png" alt="{{ .Lang }}">
             <img alt="fr" src="/flags/Flag_NoTr.png" style="position: relative;top: -50%;width: 100%;padding: 0;margin: auto;">
