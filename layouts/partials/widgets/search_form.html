@@ -2,10 +2,10 @@
   <div class="widget">
     <ul id="search-form-wrap">
       <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-          <input type="search" name="q" class="search-form-input" placeholder="{{ i18n "search-placeholder"}}">
+          <input type="search" name="q" class="search-form-input" placeholder='{{ i18n "search-placeholder"}}'>
           <button type="submit" class="search-form-submit">
           </button>
-          <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL | relLangURL }}" />
+          <input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL | absLangURL }}" />
       </form>
      </ul>
   </div>
