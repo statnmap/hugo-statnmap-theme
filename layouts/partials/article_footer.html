@@ -4,10 +4,5 @@
       {{ partial "share-links" . }}
     </ul>
   </section>
-    {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
-    <a href="{{ .Permalink }}#disqus_thread" lang="{{ .Lang }}" class="article-comment-link">
-        {{i18n "articles-comments"}}
-    </a>
-    {{end}}
     {{ partial "code-folding" . }}
 </footer>

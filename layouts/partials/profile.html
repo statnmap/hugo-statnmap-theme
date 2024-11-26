@@ -11,10 +11,10 @@
         {{ else }}
         <img id="avatar" src="{{ .Site.Params.avatar | absURL }}">
         {{ end }}
-        {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ end }}
+      {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ with .Site.Params.bio }}<h3 id="title">{{ . | safeHTML }}</h3>{{ end }}
-      {{ with .Site.Params.location }}<span id="location"><i class="fas fa-map-marker"></i>{{ . }}</span>{{ end }}
+      {{ with .Site.Params.location }}<span id="location"><i class="fas fa-map-marker"></i> {{ . }}</span>{{ end }}
     </div>
     <div class="profile-block social-links">
       <table>

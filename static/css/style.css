@@ -118,7 +118,7 @@ body,
 body {
   color: #565a5f;
   background: #f1f1f1;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: 1em "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 a {
@@ -347,7 +347,7 @@ code {
 .article-entry dl,
 .widget dl {
   margin: 0 20px;
-  line-height: 1.6em;
+  line-height: 1.2em;
 }
 .article-entry ul ul,
 .widget ul ul,
@@ -475,7 +475,7 @@ code {
   display: inline-block;
 }
 .header-inner #logo .site-title {
-  font-size: 16px;
+  font-size: 1.2em;
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
@@ -802,11 +802,11 @@ code {
   font-size: 1.3em;
 }
 #profile .inner .base-info #name {
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: 600;
 }
 #profile .inner .base-info #location {
-  font-size: 12px;
+  font-size: 0.8em;
   margin-top: 5px;
   color: #f1f1f1;
 }
@@ -960,10 +960,13 @@ code {
   margin-bottom: 0.8em;
 }
 .article-title {
-  font-size: 2.5em;
+  font-size: 2.3em;
   color: #565a5f;
   text-decoration: none;
   line-height: 1.3em;
+}
+h1.article-title {
+    font-size: 2.5em;
 }
 a.article-title:visited {
   color: #565a5f;
@@ -1090,14 +1093,14 @@ a.article-title:hover {
   left: 10px;
   content: "\f10d";
   color: #e2e2e2;
-  font-size: 32px;
+  font-size: 2em;
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   text-align: center;
   position: absolute;
 }
 .article-entry blockquote footer {
-  font-size: 14px;
+  font-size: 0.9em;
   margin: 1.6em 0;
   font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
 }
@@ -1517,7 +1520,7 @@ ul.icons {
   border-radius: 0px;
 }
 .toc-article .toc-title {
-  font-size: 120%;
+  font-size: 1.2em;
 }
 .toc-article strong {
   padding: 0.3em 1;
@@ -1860,7 +1863,7 @@ ol.toc {
     min-width: 160px;
     padding: 5px 0;
     margin: 2px 0 0;
-    font-size: 14px;
+    font-size: 0.9em;
     text-align: left;
     list-style: none;
     background-color: #fff;
@@ -1884,7 +1887,7 @@ ol.toc {
 .layout-wrap-inner.list-categories ul li,
 .layout-wrap-inner.list-categories ul .category-list-child {
     padding: 10px 10px;
-    font-size: 14px;
+    font-size: 0.9em;
     border-bottom: 1px solid border-color;
     background-color: white;
     margin-bottom: 10px;
@@ -1908,7 +1911,7 @@ ol.toc {
 .layout-wrap-inner.list-categories li a:before {
   color: #ccc;
   content: "\f0da";
-  font-size: 12px;
+  font-size: 0.8em;
   margin-right: 6px;
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
@@ -2039,10 +2042,10 @@ ol.toc {
   padding: 10px;
 }
 .timeline-row .content h1 {
-  font-size: 16px;
+  font-size: 1em;
 }
 .timeline-row .content .article-meta {
-  font-size: 12px;
+  font-size: 0.8em;
   color: #898d92;
   border-top: 1px solid #f7f7f7;
   background-color: rgba(244,246,247,0.2);
@@ -2075,7 +2078,7 @@ ol.toc {
   padding: 20px 0;
   border-top: 1px solid #eceff2;
   color: #565a5f;
-  font-size: 16px;
+  font-size: 1em;
   text-align: center;
   background-color: white;
 }
@@ -2165,7 +2168,7 @@ ol.toc {
 }
 .widget-title {
   padding-bottom: 5px;
-  font-size: 16px;
+  font-size: 1em;
   border-bottom: 1px solid #eceff2;
   margin: 5px 0;
 }
@@ -2197,7 +2200,7 @@ ol.toc {
 .widget ul .category-list-child,
 .widget ol .category-list-child {
   padding: 2px 0;
-  font-size: 14px;
+  font-size: 1em;
   border-bottom: 1px solid border-color;
 }
 .widget ul li a,
@@ -2228,7 +2231,7 @@ ol.toc {
 .widget ol:not(#recent-post) li a:before {
   color: #f1f1f1;
   content: "\f0da";
-  font-size: 12px;
+  font-size: 0.8em;
   margin-right: 6px;
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
@@ -2429,8 +2432,8 @@ ol.toc {
 }
 #recent-post li .item-inner a,
 #recent-post li .item-inner .item-category {
-  font-size: 13px;
-  text-transform: uppercase;
+  font-size: 1em;
+  /*text-transform: uppercase;*/
 }
 #recent-post li .item-inner a a,
 #recent-post li .item-inner .item-category a {
@@ -2460,8 +2463,8 @@ ol.toc {
   transition: all 0.2s ease;
 }
 #recent-post li .item-inner .item-date {
-  color: #aaa;
-  font-size: 13px;
+  color: #cecece;
+  font-size: 1em;
   /* text-transform: uppercase; */
 }
 #recent-post li:hover .item-thumbnail {
@@ -2498,14 +2501,14 @@ ol.toc {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 1em;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-weight: 200;
   -webkit-border-radius: 0;
   border-radius: 0;
   background: #fff;
-  line-height: 20px;
+  line-height: 1.2em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

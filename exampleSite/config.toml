@@ -1,11 +1,7 @@
 baseurl = "https://example.org/"
 title = "Icarus-statnmap"
-# Enable comments by entering your Disqus shortname
-disqusShortname = "spf13"
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
 # Define the number of posts per page
-paginate = 10
+pagination.pagerSize = 10
 footnotereturnlinkcontents = "↩"
 theme = "hugo-statnmap-theme"
 # Uncomment the themesDir option if you do not use this theme in production
@@ -15,6 +11,11 @@ theme = "hugo-statnmap-theme"
 [permalinks]
     post = "/:year/:month/:day/:slug"
 
+
+[services]
+  [services.googleAnalytics]
+  # Enable Google Analytics by entering your app ID
+    id = 'G-XXXXXXXX'
 
 [params]
     # Tell me who you are
@@ -79,6 +80,10 @@ theme = "hugo-statnmap-theme"
     # Number of words of post summary
     summary_length = 200
 
+    # Enable comments with Utterance by entering 
+    # the github repository where to sync comments
+    utteranceGitHubRepo = "statnmap/blog_tips"
+
 # Create custom menu entries by defining a name and a url for
 # them. Since you can also link posts, you can use the weight
 # to define order of appearance.
@@ -99,9 +104,10 @@ DefaultContentLanguage = "en"
 [Languages]
 [Languages.en]
 LanguageName = "English"
-title = "hugo-statnmap-theme"
-bio = "A wordpress twenty-fifteen like theme"
-weight = 1
+  [Languages.en.params]
+  title = "hugo-statnmap-theme"
+  bio = "A wordpress twenty-fifteen like theme"
+  weight = 1
 
 [[Languages.en.menu.main]]
 name   = "Home"
@@ -130,9 +136,10 @@ weight = 5
 
 [Languages.fr]
 LanguageName = "Français"
-title = "hugo-statnmap-theme fr"
-bio = "A wordpress twenty-fifteen like theme"
-weight = 2
+  [Languages.fr.params]
+  title = "hugo-statnmap-theme fr"
+  bio = "A wordpress twenty-fifteen like theme"
+  weight = 2
 
 [[Languages.fr.menu.main]]
 name   = "Accueil"
@@ -154,7 +161,7 @@ weight = 5
     follow_button = "https://github.com/digitalcraftsman"
 
 
-[social]
+[params.social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
 # created automatically.

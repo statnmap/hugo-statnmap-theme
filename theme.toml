@@ -7,9 +7,14 @@ tags = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google 
 features = ["syntax highlighting", "maxthjax", "rss", "gallery", "widgets", "google analytics"]
 min_version = 0.20
 
-[author]
-  name = "Digitalcraftsman"
-  homepage = "//github.com/digitalcraftsman"
+[params]
+    # Tell me who you are
+    author = "Sébastien Rochette"
+    email = "john@doe.fr"
+    
+    # Enable comments with Utterance by entering 
+    # the github repository where to sync comments
+    utteranceGitHubRepo = "statnmap/blog_tips"
 
 # If porting an existing theme
 [original]

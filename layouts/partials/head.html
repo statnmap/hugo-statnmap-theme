@@ -28,10 +28,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/google_news.html" . }}
     {{ template "_internal/schema.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
-    {{ partial "google_analytics.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
     {{ partial "head_custom" . }}
 
     {{ if .Params.disable_profile | and .Params.disable_widgets }}

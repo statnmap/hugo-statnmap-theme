@@ -25,7 +25,7 @@
 [posts-newer]
   other = "Newer"
 [postedOnDate]
-  other = "Posted on {{ .Count }}"
+  other = "Posted on {{ . }}"
 [related_articles]
   other = "Related articles"
   

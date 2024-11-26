@@ -33,7 +33,7 @@
                     {{ end }}
                     {{ end }}
                     <p class="item-date">
-                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ default (i18n "date_format") .Site.Params.date_format | .Date.Format | i18n "postedOnDate" }}</time>
+                        <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date | time.Format ":date_short" }}</time>
                     </p>
                 </div>
             </li>

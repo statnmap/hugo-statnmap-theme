@@ -4,7 +4,7 @@
 [translationsSeparator]
   other = ", "
 [date_format]
-  other = "02-01-2006"
+  other = "02/01/2006" 
 [languageSwitcherLabel]
   other = "Traductions"
 
@@ -26,7 +26,7 @@
 [posts-newer]
   other = "Plus récent"
 [postedOnDate]
-  other = "posté le {{ .Count }}"
+  other = "posté le {{ . }}"
 [related_articles]
   other = "Articles similaires"
   
