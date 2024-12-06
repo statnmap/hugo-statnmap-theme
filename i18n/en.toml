@@ -86,6 +86,8 @@
   other = "Replies typically within"
 [hours]
   other = "hours"
+[days]
+  other = "days"
 [submit]
   other = "Submit"
 

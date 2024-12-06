@@ -202,9 +202,8 @@ send the actual email. Each month, visitors can send you up to one
 thousand emails without incurring extra charges. Begin the setup by
 following the steps below:
 
-1.  Enter your email address under ‘emailservice’ in contact/index.md
-    file
-2.  Upload the generated site to your server
+1.  Enter your formspree endpoint with email address under ‘emailservice’ in contact/index.md file
+2.  Fill the other `contactxx` fields in the frontmatter of the contact page
 3.  Send a dummy email yourself to confirm your account
 4.  Click the confirm link in the email from formspree.io
 5.  You’re done. Happy mailing!

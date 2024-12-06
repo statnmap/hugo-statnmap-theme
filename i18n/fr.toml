@@ -87,6 +87,8 @@
   other = "Réponse généralement en"
 [hours]
   other = "heures"
+[days]
+  other = "jours"
 [submit]
   other = "Envoyer"
 
