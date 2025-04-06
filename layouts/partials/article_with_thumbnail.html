@@ -1,0 +1,32 @@
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="item-thumbnail">
+      <a href="{{ .Permalink }}" lang="{{ .Lang }}" class="thumbnail">
+          {{ if and (isset .Params "thumbnail") (not (eq .Params.thumbnail "")) }}
+              <span style="background-image:url({{ .Params.thumbnail | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+          {{else}}
+            {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+                <span style="background-image:url({{ .Params.banner | absURL }})" alt="{{ $.Title }}" class="thumbnail-image"></span>
+            {{else}}
+                <span class="thumbnail-image thumbnail-none"></span>
+            {{ end }}
+          {{ end }}
+      </a>
+  </div>
+  <div class="article-inner">
+      {{ partial "list_article_header" . }}
+      <div class="article-entry" itemprop="articleBody">
+          <!-- <p>
+              {{ .Description | default .Summary }}
+          </p> -->
+          {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>.*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | truncate (default 200 .Site.Params.summary_length) (default " &hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
+
+          <p>{{ $.Scratch.Get "summary" }}</p>
+          
+          <p class="article-more-link">
+              <a href="{{ .Permalink }}" lang="{{ .Lang }}">
+                  {{ i18n "articles-read-more" }}
+              </a>
+          </p>
+      </div>
+  </div>
+</article>

@@ -102,6 +102,10 @@
 <td><a href="//twitter.com/{{.}}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></td>
 {{ end }}
 
+{{ with .Site.Params.Social.bluesky }}
+<td><a href="//bsky.app/profile/{{.}}" target="_blank" title="Bluesky"><i class="fab fa-bluesky"></i></a></td>
+{{ end }}
+
 {{ with .Site.Params.Social.googlescholar }}
 <td><a href="//scholar.google.com/citations?user={{.}}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a></td>
 {{ end }}

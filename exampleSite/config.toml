@@ -115,11 +115,6 @@ url    = "/"
 weight = 1
 
 [[Languages.en.menu.main]]
-name = "Blog"
-url = "/post/"
-weight = 2
-
-[[Languages.en.menu.main]]
 name = "Sticky"
 url = "/stickies/"
 weight = 2
@@ -128,6 +123,11 @@ weight = 2
 name = "StickyPages"
 url = "/stickypages/"
 weight = 2
+
+[[Languages.en.menu.main]]
+name = "About"
+url = "/about/"
+weight = 4
 
 [[Languages.en.menu.main]]
 name = "Contact"
@@ -147,9 +147,9 @@ url    = "/"
 weight = 1
 
 [[Languages.fr.menu.main]]
-name = "Blog"
-url = "/blog/"
-weight = 2
+name = "A propos"
+url = "/a-propos/"
+weight = 4
 
 [[Languages.fr.menu.main]]
 name = "Contact"
@@ -192,7 +192,8 @@ weight = 5
     facebook        = ""
     facebook_admin  = ""
     twitter_domain  = ""
-    twitter         = "spf13"
+    twitter         = ""
+    bluesky         = "statnmap.bsky.social"
     googlescholar   = ""
     orcid           = ""
     researchgate    = ""

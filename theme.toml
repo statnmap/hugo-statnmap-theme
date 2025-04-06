@@ -16,6 +16,13 @@ min_version = 0.20
     # the github repository where to sync comments
     utteranceGitHubRepo = "statnmap/blog_tips"
 
+[params.social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+    github          = "johndoe"
+    bluesky         = "johndoe.bsky.social"
+
 # If porting an existing theme
 [original]
   name = "Ruipeng Zhang"

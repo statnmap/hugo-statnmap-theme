@@ -1,8 +1,13 @@
+{{ define "main" }}
+   
 <section class="archives-wrap">
   <div class="archives">
-    {{ range .Data.Pages }}
+    {{ $paginator := .Paginate (where  .Site.RegularPages "Type" "post") }}
+    {{ range $paginator.Pages }}
       {{ partial "article_with_thumbnail" . }}
     {{ end }}
-  </div>
+</div>
 </section>
 {{ partial "pagination" . }}
+
+{{ end }}
